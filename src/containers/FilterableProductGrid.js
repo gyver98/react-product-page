@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import FilterBar from './../components/FilterBar/FilterBar';
-import ProductCards from './../components/ProductCards/ProductCards';
+import ProductGrid from './../components/ProductGrid/ProductGrid';
 
-class FilterableProductShowroom extends Component {
+class FilterableProductGrid extends Component {
 
   constructor(props) {
     super(props);
@@ -27,7 +27,7 @@ class FilterableProductShowroom extends Component {
         onFilterOptionChange={this.handleFilterOptionChange}
         products={this.props.products} 
       />,
-      <ProductCards 
+      <ProductGrid 
         filterSize={this.state.filterSize}
         products={this.props.products} 
       />
@@ -36,4 +36,4 @@ class FilterableProductShowroom extends Component {
   }
 }
 
-export default FilterableProductShowroom;
+export default FilterableProductGrid;

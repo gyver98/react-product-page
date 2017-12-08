@@ -2,7 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 //import App from './App';
-import FilterableProductShowroom from './containers/FilterableProductShowroom';
+import FilterableProductGrid from './containers/FilterableProductGrid';
 import registerServiceWorker from './registerServiceWorker';
 
 const PRODUCTS = [
@@ -81,6 +81,6 @@ const PRODUCTS = [
 ]
 
 
-ReactDOM.render(<FilterableProductShowroom products={PRODUCTS} />, 
+ReactDOM.render(<FilterableProductGrid products={PRODUCTS} />, 
   document.getElementById('root'));
 registerServiceWorker();

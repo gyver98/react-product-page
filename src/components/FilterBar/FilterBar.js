@@ -20,7 +20,7 @@ class FilterBar extends Component {
     const uniqueSizes = [...new Set(sizes)];
     
     const sizeOptions = uniqueSizes.map(size => (
-      <option value={size}>{size}</option>
+      <option key={size} value={size}>{size}</option>
     ));
 
     return (

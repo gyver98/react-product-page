@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
-import './ProductCards.css';
+import './ProductGrid.css';
 import ProductCard from './ProductCard';
 
-class ProductCards extends Component {
+class ProductGrid extends Component {
 
   render() {
     const filterSize = this.props.filterSize;
@@ -11,17 +11,17 @@ class ProductCards extends Component {
     this.props.products.map((product) => {
       if (product.size.indexOf(filterSize) !== -1) {
         cards.push(
-          <ProductCard product={product} />
+          <ProductCard key={product.index} product={product} />
         )
       } else if (filterSize === '' || filterSize === 'Filter by size') {
         cards.push(
-          <ProductCard product={product} />
+          <ProductCard key={product.index} product={product} />
         )  
       }
     });
   
     return(
-      <section class="product-container">
+      <section className="product-container">
         {cards}
       </section>  
     )
@@ -29,4 +29,4 @@ class ProductCards extends Component {
   
 }
 
-export default ProductCards;
+export default ProductGrid;
