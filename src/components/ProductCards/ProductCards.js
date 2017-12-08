@@ -1,24 +1,32 @@
-import React from 'react';
+import React, { Component } from 'react';
 import './ProductCards.css';
+import ProductCard from './ProductCard';
 
-const ProductCards = (props) => {
-  const cards = props.products.map((product) => (
-    <div className="product-card">
-      <div className="product-image">
-        <img src={require(`../../assets/${product.productImage}`)} alt=""/>
-      </div>
-      <div className="product-info">
-        <h5 className="product-info__item">{product.productName}</h5>
-        <h6 className="product-info__price">{product.price}</h6>
-      </div>
-    </div>
-  ));
+class ProductCards extends Component {
 
-  return(
-    <section class="product-container">
-      {cards}
-    </section>  
-  )
+  render() {
+    const filterSize = this.props.filterSize;
+    const cards = [];
+
+    this.props.products.map((product) => {
+      if (product.size.indexOf(filterSize) !== -1) {
+        cards.push(
+          <ProductCard product={product} />
+        )
+      } else if (filterSize === '' || filterSize === 'Filter by size') {
+        cards.push(
+          <ProductCard product={product} />
+        )  
+      }
+    });
+  
+    return(
+      <section class="product-container">
+        {cards}
+      </section>  
+    )
+  }
+  
 }
 
 export default ProductCards;
