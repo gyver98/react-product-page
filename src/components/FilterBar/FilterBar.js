@@ -1,7 +1,7 @@
 import React from 'react';
-import './Filter.css';
+import './FilterBar.css';
 
-const Filter = () => (
+const FilterBar = () => (
   <nav className="filter-container">
     <div className="filter">
       <h1>Women's tops</h1>
@@ -12,6 +12,6 @@ const Filter = () => (
   </nav>
 )
 
-export default Filter;
+export default FilterBar;
 
 
