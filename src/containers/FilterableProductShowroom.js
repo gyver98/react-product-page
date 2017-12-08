@@ -5,8 +5,8 @@ import ProductCards from './../components/ProductCards/ProductCards';
 class FilterableProductShowroom extends Component {
   render(props) {
     return ([
-      <FilterBar />,
-      <ProductCards products={this.props.products}/>
+      <FilterBar products={this.props.products} />,
+      <ProductCards products={this.props.products} />
       ]
     )
   }
