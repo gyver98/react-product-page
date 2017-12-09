@@ -42,17 +42,11 @@
 }
 
 .product-info {
-  /* margin-top: auto; */
+  margin-top: auto;
 	padding-top: 20px;
   display: flex;
   justify-content: space-between;
 }
-
-/* @media (min-width: 600px) {
-  .product-info {
-    justify-content: space-between;
-  }
-} */
 
 .product-info__item {
   align-self: center;

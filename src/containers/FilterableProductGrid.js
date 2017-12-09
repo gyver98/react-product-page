@@ -11,7 +11,7 @@ class FilterableProductGrid extends Component {
     };
 
     this.handleFilterOptionChange = this.handleFilterOptionChange.bind(this);
-    
+
   }
 
   handleFilterOptionChange(filterSize) {
@@ -20,19 +20,21 @@ class FilterableProductGrid extends Component {
     });
   }
 
-  render(props) {
+  render() {
+    const { filterSize } = this.state;
+    const { products } = this.props;
+
     return ([
-      <FilterBar 
-        filterSize={this.state.filterSize}
+      <FilterBar
+        filterSize={filterSize}
         onFilterOptionChange={this.handleFilterOptionChange}
-        products={this.props.products} 
+        products={products}
       />,
-      <ProductGrid 
-        filterSize={this.state.filterSize}
-        products={this.props.products} 
+      <ProductGrid
+        filterSize={filterSize}
+        products={products}
       />
-      ]
-    )
+    ])
   }
 }
 
