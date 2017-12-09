@@ -42,7 +42,7 @@
 }
 
 .product-info {
-  margin-top: auto;
+  /* margin-top: auto; */
 	padding-top: 20px;
   display: flex;
   justify-content: space-around;
@@ -67,4 +67,20 @@
   .product-info__price {
     font-size: 22px;
   }
+}
+
+.product-badge {
+  margin-top: auto;
+  padding-top: 20px;
+  width: 100%;
+  height: 52px;
+  background-color: #fff;
+}
+
+.product-badge--sale {
+  background: url(../../assets/sale.png) no-repeat;
+}
+
+.product-badge--exclusive {
+  background: url(../../assets/exclusive.png) no-repeat;
 }
