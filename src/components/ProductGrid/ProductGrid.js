@@ -8,7 +8,7 @@ class ProductGrid extends Component {
     const filterSize = this.props.filterSize;
     const cards = [];
 
-    this.props.products.map((product) => {
+    this.props.products.forEach((product) => {
       if (product.size.indexOf(filterSize) !== -1) {
         cards.push(
           <ProductCard key={product.index} product={product} />
